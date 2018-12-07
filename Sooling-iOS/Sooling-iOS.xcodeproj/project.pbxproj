@@ -12,6 +12,9 @@
 		2F5CAA2C21BACF4F001049A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F5CAA2A21BACF4F001049A8 /* Main.storyboard */; };
 		2F5CAA2E21BACF50001049A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F5CAA2D21BACF50001049A8 /* Assets.xcassets */; };
 		2F5CAA3121BACF50001049A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F5CAA2F21BACF50001049A8 /* LaunchScreen.storyboard */; };
+		2F5CAA3A21BAD2AD001049A8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2F5CAA3921BAD2AD001049A8 /* README.md */; };
+		2F5CAA4021BAD35D001049A8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5CAA3F21BAD35D001049A8 /* UserModel.swift */; };
+		2F5CAA4221BAD378001049A8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5CAA4121BAD378001049A8 /* NetworkService.swift */; };
 		8BBDD778996122A8C904F8E4 /* Pods_Sooling_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9C487B3E61AE1C1CCCC649 /* Pods_Sooling_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		2F5CAA2D21BACF50001049A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F5CAA3021BACF50001049A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F5CAA3221BACF50001049A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F5CAA3921BAD2AD001049A8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2F5CAA3F21BAD35D001049A8 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		2F5CAA4121BAD378001049A8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FFDCD2E25F3AED9132F2F6D9 /* Pods-Sooling-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sooling-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sooling-iOS/Pods-Sooling-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +66,7 @@
 		2F5CAA1A21BACF4F001049A8 = {
 			isa = PBXGroup;
 			children = (
+				2F5CAA3921BAD2AD001049A8 /* README.md */,
 				2F5CAA2521BACF4F001049A8 /* Sooling-iOS */,
 				2F5CAA2421BACF4F001049A8 /* Products */,
 				0E24AABA377364AA15769853 /* Pods */,
@@ -79,13 +86,55 @@
 			isa = PBXGroup;
 			children = (
 				2F5CAA2621BACF4F001049A8 /* AppDelegate.swift */,
-				2F5CAA2821BACF4F001049A8 /* ViewController.swift */,
-				2F5CAA2A21BACF4F001049A8 /* Main.storyboard */,
-				2F5CAA2D21BACF50001049A8 /* Assets.xcassets */,
-				2F5CAA2F21BACF50001049A8 /* LaunchScreen.storyboard */,
-				2F5CAA3221BACF50001049A8 /* Info.plist */,
+				2F5CAA3E21BAD2FA001049A8 /* Storyboard */,
+				2F5CAA3D21BAD2E5001049A8 /* Model */,
+				2F5CAA3C21BAD2DA001049A8 /* View */,
+				2F5CAA3B21BAD2B8001049A8 /* ViewModel */,
+				2F5CAA3821BAD158001049A8 /* SupportFile */,
 			);
 			path = "Sooling-iOS";
+			sourceTree = "<group>";
+		};
+		2F5CAA3821BAD158001049A8 /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				2F5CAA2D21BACF50001049A8 /* Assets.xcassets */,
+				2F5CAA3221BACF50001049A8 /* Info.plist */,
+			);
+			path = SupportFile;
+			sourceTree = "<group>";
+		};
+		2F5CAA3B21BAD2B8001049A8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F5CAA4121BAD378001049A8 /* NetworkService.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2F5CAA3C21BAD2DA001049A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F5CAA2821BACF4F001049A8 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F5CAA3D21BAD2E5001049A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F5CAA3F21BAD35D001049A8 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F5CAA3E21BAD2FA001049A8 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2F5CAA2A21BACF4F001049A8 /* Main.storyboard */,
+				2F5CAA2F21BACF50001049A8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +199,7 @@
 			files = (
 				2F5CAA3121BACF50001049A8 /* LaunchScreen.storyboard in Resources */,
 				2F5CAA2E21BACF50001049A8 /* Assets.xcassets in Resources */,
+				2F5CAA3A21BAD2AD001049A8 /* README.md in Resources */,
 				2F5CAA2C21BACF4F001049A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +271,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F5CAA2921BACF4F001049A8 /* ViewController.swift in Sources */,
+				2F5CAA4021BAD35D001049A8 /* UserModel.swift in Sources */,
+				2F5CAA4221BAD378001049A8 /* NetworkService.swift in Sources */,
 				2F5CAA2721BACF4F001049A8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,7 +422,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 524TVTU6B9;
-				INFOPLIST_FILE = "Sooling-iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sooling-iOS/SupportFile/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -390,7 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 524TVTU6B9;
-				INFOPLIST_FILE = "Sooling-iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sooling-iOS/SupportFile/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
