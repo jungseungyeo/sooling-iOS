@@ -15,6 +15,7 @@
 		2F5CAA3A21BAD2AD001049A8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2F5CAA3921BAD2AD001049A8 /* README.md */; };
 		2F5CAA4021BAD35D001049A8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5CAA3F21BAD35D001049A8 /* UserModel.swift */; };
 		2F5CAA4221BAD378001049A8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5CAA4121BAD378001049A8 /* NetworkService.swift */; };
+		2F5CAA4421BAD553001049A8 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5CAA4321BAD553001049A8 /* KakaoOpenSDK.framework */; };
 		8BBDD778996122A8C904F8E4 /* Pods_Sooling_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9C487B3E61AE1C1CCCC649 /* Pods_Sooling_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,8 @@
 		2F5CAA3921BAD2AD001049A8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2F5CAA3F21BAD35D001049A8 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2F5CAA4121BAD378001049A8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2F5CAA4321BAD553001049A8 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		2F5CAA4521BAD7D5001049A8 /* Sooling-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sooling-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		FFDCD2E25F3AED9132F2F6D9 /* Pods-Sooling-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sooling-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sooling-iOS/Pods-Sooling-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,6 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BBDD778996122A8C904F8E4 /* Pods_Sooling_iOS.framework in Frameworks */,
+				2F5CAA4421BAD553001049A8 /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +53,7 @@
 		075A0CE6B3379646FBD228C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F5CAA4321BAD553001049A8 /* KakaoOpenSDK.framework */,
 				1E9C487B3E61AE1C1CCCC649 /* Pods_Sooling_iOS.framework */,
 			);
 			name = Frameworks;
@@ -91,6 +96,7 @@
 				2F5CAA3C21BAD2DA001049A8 /* View */,
 				2F5CAA3B21BAD2B8001049A8 /* ViewModel */,
 				2F5CAA3821BAD158001049A8 /* SupportFile */,
+				2F5CAA4521BAD7D5001049A8 /* Sooling-iOS-Bridging-Header.h */,
 			);
 			path = "Sooling-iOS";
 			sourceTree = "<group>";
@@ -171,6 +177,7 @@
 				TargetAttributes = {
 					2F5CAA2221BACF4F001049A8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -420,16 +427,41 @@
 			baseConfigurationReference = 097E5F7081BE815B3943E92C /* Pods-Sooling-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 524TVTU6B9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sooling-iOS/SupportFile/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"RxAtomic\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"Then\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.linsaeng.Sooling-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sooling-iOS/Sooling-iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,16 +472,40 @@
 			baseConfigurationReference = FFDCD2E25F3AED9132F2F6D9 /* Pods-Sooling-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 524TVTU6B9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sooling-iOS/SupportFile/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"RxAtomic\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"Then\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.linsaeng.Sooling-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sooling-iOS/Sooling-iOS-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

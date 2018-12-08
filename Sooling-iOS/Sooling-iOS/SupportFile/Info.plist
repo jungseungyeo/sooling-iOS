@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>KAKAO_APP_KEY</key>
+	<string>081b5b1efad1e8b3f0cf1bd2bff78457</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -16,6 +18,26 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kakao081b5b1efad1e8b3f0cf1bd2bff78457</string>
+			</array>
+		</dict>
+	</array>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>kakao081b5b1efad1e8b3f0cf1bd2bff78457</string>
+        <string>kakaokompassauth</string>
+        <string>storykompassauth</string>
+        <string>kakaolink</string>
+        <string>kakaotalk-5.9.7</string>
+        <string>storylink</string>
+    </array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
