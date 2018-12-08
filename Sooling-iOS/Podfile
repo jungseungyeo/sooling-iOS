@@ -12,4 +12,6 @@ target 'Sooling-iOS' do
     pod 'Alamofire', '~> 5.0.0.beta.1'
     pod 'ObjectMapper', '~> 3.4'
     pod 'Then'
+
+    pod 'GoogleSignIn'
 end

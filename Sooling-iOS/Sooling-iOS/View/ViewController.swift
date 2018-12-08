@@ -8,10 +8,22 @@
 
 import UIKit
 import KakaoOpenSDK
+import GoogleSignIn
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        print("email :: \(user.profile.email)")
+        print("name :: \(user.profile.imageURL(withDimension: 400))")
+        
+        print("user :: \(user.profile.familyName)")
+        print("name :: \(user.profile.name)")
+        print("given.name :: \(user.profile.givenName)")
+        
+    }
+    
 
-//    let buttton = KOLoginButton.
+    private let signInButton = GIDSignInButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+    private let image = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
     
     @IBAction func kakaoButton(_ sender: Any) {
         let session = KOSession.shared()
@@ -41,12 +53,23 @@ class ViewController: UIViewController {
             print("세션 에러")
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+      
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance()?.delegate = self
+        
+        
+        signInButton.center = self.view.center
+        image.center = self.view.center
+        self.view.addSubview(signInButton)
+        self.view.addSubview(image)
+        
+        
     }
 
 
 }
-
