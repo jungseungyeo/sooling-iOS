@@ -6,4 +6,17 @@
 //  Copyright © 2018 여정승. All rights reserved.
 //
 
-import Foundation
+import ObjectMapper
+
+class UserInfo: Mappable {
+    
+    var name: String?
+    var profileURL: String?
+    
+    required init?(map: Map) { }
+    
+    func mapping(map: Map) {
+        self.name           <- map["name"]
+        self.profileURL     <- map["profileURL"]
+    }
+}

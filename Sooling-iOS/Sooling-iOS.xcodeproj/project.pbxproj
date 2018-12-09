@@ -92,6 +92,7 @@
 		2F5CAA2521BACF4F001049A8 /* Sooling-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2F96615D21BBCEFF0061C199 /* BaseVC */,
 				2F5CAA2621BACF4F001049A8 /* AppDelegate.swift */,
 				2F5CAA3E21BAD2FA001049A8 /* Storyboard */,
 				2F5CAA3D21BAD2E5001049A8 /* Model */,
@@ -144,6 +145,13 @@
 				2F5CAA2F21BACF50001049A8 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		2F96615D21BBCEFF0061C199 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +261,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -267,6 +276,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
