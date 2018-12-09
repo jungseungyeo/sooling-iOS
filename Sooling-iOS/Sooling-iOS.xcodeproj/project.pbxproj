@@ -498,6 +498,7 @@
 					"-framework",
 					"\"Then\"",
 					"-all_load",
+					"-Objc",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.linsaeng.Sooling-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -543,6 +544,7 @@
 					"-framework",
 					"\"Then\"",
 					"-all_load",
+					"-Objc",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.linsaeng.Sooling-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
